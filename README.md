@@ -2,8 +2,8 @@
 In summary, the main contributions of this paper are as follows:
 
 • ParamSmoothL1 regression loss function and a dynamic law that changes
-the parameters of the robust loss function during training. For this pur-
-pose, we use the parabolic law with the following robust loss functions:
+the parameters of the robust loss function during training. For this 
+purpose, we use the parabolic law with the following robust loss functions:
 ParamSmoothL1, Huber and Tukey, to be able to solve the problem of
 complexity in finding the best loss function parameter. Furthermore, these
 dynamic losses improve the training convergence compared with the stan-

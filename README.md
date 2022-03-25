@@ -1,24 +1,26 @@
-## Deep Learning Based Face Beauty Prediction via Dynamic Robust Losses and Ensemble Regression
-
+## CNN Based Facial Aesthetics Analysis through Dynamic Robust Losses and Ensemble Regression
 In summary, the main contributions of this paper are as follows:
 
-- We propose ParamSmoothL1 regression loss function. In addition, we introduce a
-dynamic law that changes the parameter of the robust loss function during train-
-ing. To this end, we use the cosine law with the following robust loss functions:
-ParamSmoothL1, Huber and Tukey. This can solve the issue of complexity in
-searching the best loss function parameter.
+• ParamSmoothL1 regression loss function and a dynamic law that changes
+the parameters of the robust loss function during training. For this pur-
+pose, we use the parabolic law with the following robust loss functions:
+ParamSmoothL1, Huber and Tukey, to be able to solve the problem of
+complexity in finding the best loss function parameter. Furthermore, these
+dynamic losses improve the training convergence compared with the stan-
+dard loss functions (MSE and L1) and robust loss functions (SmoothL1,
+Huber and Tukey) adopting a fixed parameter.
 
-- We propose two branches network (REX-INCEP) for facial beauty estimation based
-on ResneXt-50 and Inception-v3 architectures. The main advantage of our REX-
-INCEP architecture is its ability to learn high-level FBP features using ResneXt and
-Inception blocks simultaneously, which proved its efficiency compared to seven CNN
-architectures. Moreover, our REX-INCEP architecture provides the right tradeoff
-between the performance and the number of parameters for facial beauty prediction.
+• Two backbones network (2B-IncRex) for face beauty estimation based on
+ResneXt-50 and Inception-v3 architectures is proposed for Facial Beauty
+Prediction.
 
-- We propose ensemble regression for facial beauty estimation by fusing the predicted
-scores of one branch networks (ResneXt-50 and Inception-v3) and two branches
-network (REX-INCEP) which are trained using four loss functions (MSE, dynamic
-ParamSmoothL1, dynamic Huber and dynamic Tukey). Although the individual
-regression models are trained using the same fixed hyper-parameters, the resulting
-ensemble regression yields the best accurate estimates compared to the individual
-models and to the state-of-the-art solutions.
+• Ensemble regression for estimating facial beauty by fusing the predicted
+values of one-branch networks (ResneXt-50 and Inception-v3) and two
+backbones networks (2B-IncRex) is proposed. This ensemble of five CNNs
+are trained with these dynamic loss functions: Dynamic ParamSmoothL1,
+Dynamic Tukey, Dynamic ParamSmoothL1, Dynamic Huber, and Dynamic
+Tukey, respectively. Although the individual regression models are sepa-
+rately trained with the same fixed hyperparameters, the estimates generated
+by the resulting ensemble regression are more accurate compared to the
+individual models as well as to the state-of-the-art solutions.
+

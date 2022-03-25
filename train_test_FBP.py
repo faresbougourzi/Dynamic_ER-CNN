@@ -256,7 +256,8 @@ def Train_FBP():
                 
                 
         else: 
-            sigma = sigma_min + (1/2)* (sigma_max - sigma_min ) * (1+ np.cos (np.pi * ((epoch+1)/ opt.Nepochs)))
+            sigma = sigma_max - (sigma_max-sigma_min) *((epoch[i]+1)/opt.Nepochs)**2
+            
             
             if opt.model == 'REXINCET':
         
